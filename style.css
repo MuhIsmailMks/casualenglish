@@ -55,8 +55,16 @@ body {
 }
 
 .home .play {
-    margin: auto;
-    position: relative;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;              /* espace entre flèches et bloc central */
+}
+
+/* On garde ton image + bouton bleu dans un bloc */
+.play-main {
+  position: relative;
 }
 
 .home .play img {
@@ -87,6 +95,30 @@ body {
     
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
+}
+
+/* Boutons de navigation gauche / droite */
+.play-nav {
+  /* reset du style iOS */
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+
+  /* style visuel */
+  font-size: 2.2rem;
+  line-height: 1;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: var(--text-color-primary);
+
+  /* pour qu'ils ne ressemblent pas à un bouton gris iOS */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.play-nav:focus {
+  outline: none;
 }
 
 .words {
@@ -576,6 +608,7 @@ body {
 .nav-btn:active {
     transform: scale(0.95);
 }
+
 
 
 
