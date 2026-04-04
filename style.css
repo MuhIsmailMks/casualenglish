@@ -74,13 +74,15 @@ body {
 .home .play a {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY( -50%);
     
     color: white;
     font-size: 1.8rem;   /* légèrement plus petit */
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+
+    top: 100%; 
 
     padding: 8px 1.2em;
     border-radius: 1em;
