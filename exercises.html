@@ -216,7 +216,7 @@
     const hintEl = document.getElementById("hint");
     const choicesEl = document.getElementById("choices");
     const feedbackEl = document.getElementById("feedback");
-    const nextBtn = document.getElementById("nextExercise");
+    const nextExercise = document.getElementById("nextExercise");
 
     let locked = false;
 
@@ -297,7 +297,7 @@
       }
     }
 
-    nextBtn.addEventListener("click", () => {
+    nextExercise.addEventListener("click", () => {
       renderExercise();
     });
 

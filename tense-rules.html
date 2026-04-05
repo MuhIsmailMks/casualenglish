@@ -128,7 +128,7 @@
     const ruleEl = document.getElementById("tenseRule");
     const exampleEl = document.getElementById("tenseExample");
     const signalsEl = document.getElementById("tenseSignals");
-    const nextBtn = document.getElementById("nextTense");
+    const nextTenseBtn = document.getElementById("nextTense");
 
     let index = 0;
 
@@ -140,7 +140,7 @@
       signalsEl.textContent = t.signals;
     }
 
-    nextBtn.addEventListener("click", () => {
+    nextTenseBtn.addEventListener("click", () => {
       index++;
       if (index >= tenses.length) index = 0;
       renderCard();
