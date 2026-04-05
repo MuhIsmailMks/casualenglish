@@ -34,7 +34,7 @@
         <p class="exercise-feedback" id="feedback"></p>
 
         <!-- Next / Finish -->
-        <button class="exercise-next" id="nextBtn" type="button">Next</button>
+        <button class="exercise-next" id="nextExamBtn" type="button">Next</button>
 
         <!-- Result block (hidden until the end) -->
         <div id="result" style="display:none; margin-top: 14px; text-align:center;">
@@ -243,7 +243,7 @@
     const hintEl = document.getElementById("hint");
     const choicesEl = document.getElementById("choices");
     const feedbackEl = document.getElementById("feedback");
-    const nextBtn = document.getElementById("nextBtn");
+    const nextExamBtn = document.getElementById("nextExamBtn");
 
     const resultBox = document.getElementById("result");
     const resultTitle = document.getElementById("resultTitle");
@@ -291,7 +291,7 @@
       feedbackEl.className = "exercise-feedback";
 
       resultBox.style.display = "none";
-      nextBtn.style.display = "block";
+      nextExamBtn.style.display = "block";
 
       progressEl.textContent = `(Question ${qIndex + 1}/${TOTAL})`;
 
@@ -316,7 +316,7 @@
       });
 
       // On last question, button says Finish
-      nextBtn.textContent = (qIndex === TOTAL - 1) ? "Finish" : "Next";
+      nextExamBtn.textContent = (qIndex === TOTAL - 1) ? "Finish" : "Next";
     }
 
     function onPick(value, btn) {
@@ -345,7 +345,7 @@
 
     function showResult() {
       // hide question UI
-      nextBtn.style.display = "none";
+      nextExamBtn.style.display = "none";
       resultBox.style.display = "block";
       choicesEl.innerHTML = "";
       sentenceEl.textContent = "";
@@ -368,7 +368,7 @@
       }
     }
 
-    nextBtn.addEventListener("click", () => {
+    nextExamBtn.addEventListener("click", () => {
       // If user didn't answer, block advancing (optional)
       if (!locked) {
         feedbackEl.textContent = "Please choose an answer 🙂";
