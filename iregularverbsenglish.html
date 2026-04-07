@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,7 +43,8 @@
           <li><a class="legal" href="./mention.html" target="_blank" rel="noopener">Legal Notice</a></li>
           <li><a class="legal" href="./cookies.html" target="_blank" rel="noopener">Cookie Policy</a></li>
           <li><a class="legal" href="./confidentialite.html" target="_blank" rel="noopener">Privacy Policy</a></li>
-          <li><a class="legal" href="./condition.html" target="_blank" rel="noopener">General Terms and Conditions of Sale (GTCS)</a></li>
+          <li><a class="legal" href="./condition.html" target="_blank" rel="noopener">General Terms and Conditions of
+              Sale (GTCS)</a></li>
         </ul>
         <a href="./index.html">
           <img src="./img/logo.png" alt="Casual English" />
@@ -56,6 +58,9 @@
     <button onclick="toggleQues()" class="btn-float ques">
       <img src="./img/question.svg" alt="Help" />
     </button>
+      <button onclick="toggleLanguages()" class="btn-float language">
+      <img src="./img/button_language.svg" alt="Button language" />
+    </button>
 
     <!-- menu -->
     <div class="menu">
@@ -65,12 +70,26 @@
     <!-- overlay -->
     <div class="menu-overlay" onclick="closeMenu()" aria-hidden="true"></div>
 
-    <!-- help -->
-   <!-- help -->
-<div class="help">
-  <h3 class="help-title">Help</h3>
+    <!-- help --> 
+    <div class="help">
+      <h3 class="help-title">Help</h3>
 
-  <div class="help-lang">
+
+
+      <ol class="help-list">
+        <li>In the settings, set your phone to English.</li>
+        <li>In the menu, choose the language.</li>
+        <li>Press play.</li>
+        <li>You have 2 seconds to find the answer.</li>
+        <li>The result is displayed.</li>
+        <li>To listen, press the speaker.</li>
+        <li>To go to the next, press the arrow.</li>
+      </ol>
+    </div>
+
+    <!-- language options -->
+    <div class="language-options">
+        <div class="help-lang">
     <p class="help-subtitle">Choose your language:</p>
     <div class="help-lang-buttons">
       <a class="help-lang-btn" href="./iregularverbsenglish.html">English</a>
@@ -78,17 +97,7 @@
       <a class="help-lang-btn" href="./iregularverbshindi.html">हिन्दी</a>
     </div>
   </div>
-
-  <ol class="help-list">
-    <li>In the settings, set your phone to English.</li>
-    <li>In the menu, choose the language.</li>
-    <li>Press play.</li>
-    <li>You have 2 seconds to find the answer.</li>
-    <li>The result is displayed.</li>
-    <li>To listen, press the speaker.</li>
-    <li>To go to the next, press the arrow.</li>
-  </ol>
-</div>
+    </div>
   </div>
 
   <!-- If you still use functions from script.js (toggleMenu/toggleDark/toggleQues), keep this. -->
@@ -324,20 +333,20 @@
     }
 
     function isInstagramWebView() {
-    const ua = navigator.userAgent || "";
-    return ua.includes("Instagram");
+      const ua = navigator.userAgent || "";
+      return ua.includes("Instagram");
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-    const speakButton = document.getElementById("speakButton");
+      const speakButton = document.getElementById("speakButton");
 
-    if (isInstagramWebView()) {
-    // Hide the speaker button entirely in Instagram
-    speakButton.style.display = "none";
-    }
+      if (isInstagramWebView()) {
+        // Hide the speaker button entirely in Instagram
+        speakButton.style.display = "none";
+      }
     });
 
   </script>
 </body>
-</html>
 
+</html>

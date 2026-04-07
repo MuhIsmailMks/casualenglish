@@ -329,10 +329,10 @@ body {
     text-decoration: none;
 }
 
-.help {
+.help,
+.language-options {
     position: absolute;
     width: 90%;
-    height: 80vh;
     top: -50%;
     left: 50%;
     opacity: 0;
@@ -353,6 +353,10 @@ body {
     transition: 0.5s all;
 }
 
+.help{
+    height: 80vh;
+}
+
 .help-title {
   margin-top: 0;
 }
@@ -362,8 +366,25 @@ body {
     top: 50%;
 }
 
+.language-options{
+  height: auto;  
+}
+
+.language-options.show{
+    opacity: 1;
+    top: 50%;
+}
+
 .ques {
     top: 65px;
+}
+
+.language{ 
+  top: 110px;
+}
+
+.btn-float.language img{
+  height: 25px;
 }
 
 .menu-overlay {

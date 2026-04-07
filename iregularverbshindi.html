@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English Irregular Verbs</title>
+  <title>Hindi Irregular Verbs</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -42,7 +43,8 @@
           <li><a class="legal" href="./mention.html" target="_blank" rel="noopener">Legal Notice</a></li>
           <li><a class="legal" href="./cookies.html" target="_blank" rel="noopener">Cookie Policy</a></li>
           <li><a class="legal" href="./confidentialite.html" target="_blank" rel="noopener">Privacy Policy</a></li>
-          <li><a class="legal" href="./condition.html" target="_blank" rel="noopener">General Terms and Conditions of Sale (GTCS)</a></li>
+          <li><a class="legal" href="./condition.html" target="_blank" rel="noopener">General Terms and Conditions of
+              Sale (GTCS)</a></li>
         </ul>
         <a href="./index.html">
           <img src="./img/logo.png" alt="Casual English" />
@@ -55,6 +57,9 @@
     </button>
     <button onclick="toggleQues()" class="btn-float ques">
       <img src="./img/question.svg" alt="Help" />
+    </button>
+    <button onclick="toggleLanguages()" class="btn-float language">
+      <img src="./img/button_language.svg" alt="Button language" />
     </button>
 
     <!-- menu -->
@@ -82,6 +87,18 @@
         <br><br>
         7. To go to the next, press the arrow
       </p>
+    </div>
+
+    <!-- language options -->
+    <div class="language-options">
+      <div class="help-lang">
+        <p class="help-subtitle">Choose your language:</p>
+        <div class="help-lang-buttons">
+          <a class="help-lang-btn" href="./iregularverbsenglish.html">English</a>
+          <a class="help-lang-btn" href="./iregularverbs.html">Français</a>
+          <a class="help-lang-btn" href="./iregularverbshindi.html">हिन्दी</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -318,20 +335,21 @@
     }
 
     function isInstagramWebView() {
-    const ua = navigator.userAgent || "";
-    return ua.includes("Instagram");
+      const ua = navigator.userAgent || "";
+      return ua.includes("Instagram");
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-    const speakButton = document.getElementById("speakButton");
+      const speakButton = document.getElementById("speakButton");
 
-    if (isInstagramWebView()) {
-    // Hide the speaker button entirely in Instagram
-    speakButton.style.display = "none";
-    }
+      if (isInstagramWebView()) {
+        // Hide the speaker button entirely in Instagram
+        speakButton.style.display = "none";
+      }
     });
-    
+
 
   </script>
 </body>
+
 </html>

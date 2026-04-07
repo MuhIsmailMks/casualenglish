@@ -18,6 +18,7 @@ const overlay = document.querySelector('.menu-overlay'); // <-- NEW (add overlay
 let show = false;
 
 const help = document.querySelector('.help');
+const languages = document.querySelector('.language-options');
 
 const toggleDark = () => {
   dark = !dark;
@@ -26,8 +27,32 @@ const toggleDark = () => {
 };
 
 const toggleQues = () => {
-  help.classList.toggle('show');
+  if (languages) languages.classList.remove('show');
+  if (help) help.classList.toggle('show');
 };
+
+const toggleLanguages = () => {
+  if (help) help.classList.remove('show');
+  if (languages) languages.classList.toggle('show');
+};
+
+document.addEventListener('click', (e) => {
+  const isClickInsideHelp = help && help.contains(e.target);
+  const isClickInsideLang = languages && languages.contains(e.target);
+
+  const isClickHelpBtn = e.target.closest('.ques');
+  const isClickLangBtn = e.target.closest('.language');
+
+  if (
+    !isClickInsideHelp &&
+    !isClickInsideLang &&
+    !isClickHelpBtn &&
+    !isClickLangBtn
+  ) {
+    if (help) help.classList.remove('show');
+    if (languages) languages.classList.remove('show');
+  }
+});
 
 const changeTheme = () => {
   if (dark === true) {
